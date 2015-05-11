@@ -92,7 +92,7 @@ the same as with anydb
 user.select(user.name, post.content)
   .from(user.join(post).on(user.id.equals(post.userId)))
   .where(post.date.gt(yesterday))
-  .all(function(err, userposts) {
+  .all(function(err, res) {
     // res[0].name and res[0].content
   });
 ```
